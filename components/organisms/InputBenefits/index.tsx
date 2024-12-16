@@ -7,7 +7,7 @@ import { jobFormSchema } from "@/lib/form-schema";
 // import { benefitType } from "@/constans/type";
 
 interface InputBenefitsProps {
-  form: z.infer<typeof jobFormSchema>;
+  form: any;
 }
 
 const InputBenefits: FC<InputBenefitsProps> = ({ form }) => {

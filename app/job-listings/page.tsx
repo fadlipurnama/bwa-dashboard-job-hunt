@@ -8,10 +8,11 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { JOB_LISTING_COLUMN, JOB_LISTING_DATA } from "@/constants";
+import { JOB_LISTING_COLUMNS, JOB_LISTING_DATA } from "@/constants";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
+import ButtonActionTable from "@/components/organisms/ButtonActionTable";
 
 interface jobListingsPageProps {}
 
@@ -24,7 +25,7 @@ const jobListingsPage: FC<jobListingsPageProps> = ({}) => {
           <TableCaption>A list of your recent invoices.</TableCaption>
           <TableHeader>
             <TableRow>
-              {JOB_LISTING_COLUMN.map((item: string, i: number) => (
+              {JOB_LISTING_COLUMNS.map((item: string, i: number) => (
                 <TableHead key={item + i}>{item}</TableHead>
               ))}
               <TableHead>Action</TableHead>
@@ -47,9 +48,7 @@ const jobListingsPage: FC<jobListingsPageProps> = ({}) => {
                   {item.applicants} / {item.needs}
                 </TableCell>
                 <TableCell>
-                  <Button size={"icon"} variant={"outline"}>
-                    <MoreVertical className="w-4 h-4"/>
-                  </Button>
+                  <ButtonActionTable url={`/job-detail/${item.roles + i}`} />
                 </TableCell>
               </TableRow>
             ))}

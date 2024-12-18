@@ -29,9 +29,26 @@ export const jobFormSchema = z.object({
     .min(10, { message: "Nice-to-haves must be at least 10 characters" }),
   benefits: z
     .object({
-      benefit: z.string(),
-      description: z.string(),
+      benefit: z.string({ required_error: "Benefit is required" }),
+      description: z.string({ required_error: "Description is required" }),
     })
     .array()
     .nonempty({ message: "Benefits must be at least 1 benefit" }),
+});
+
+export const overviewFormSchema = z.object({
+  image: z
+    .any()
+    .refine((item: any) => item?.name, { message: "Image is required" }),
+  name: z.string({ required_error: "Name is required" }),
+  website: z.string({ required_error: "Website is required" }),
+  location: z.string({ required_error: "Location is required" }),
+  employee: z.string({ required_error: "Employee is required" }),
+  industry: z.string({ required_error: "Industry is required" }),
+  dateFounded: z.date({ required_error: "Date Founded is required" }),
+  techStack: z
+    .string({required_error: 'Tech Stack is required'})
+    .array()
+    .nonempty({ message: "Tech Stack must be at least 1 data" }),
+  description: z.string({ required_error: "Description is required" }),
 });

@@ -28,7 +28,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import InputSkills from "@/components/organisms/InputSkills";
-import CKEditorComponent from "@/components/CKEditor";
+import CKEditorComponent from "@/components/organisms/CKEditor";
 import InputBenefits from "@/components/organisms/InputBenefits";
 import { Button } from "@/components/ui/button";
 
@@ -200,7 +200,7 @@ const PostJobPage: FC<PostJobPageProps> = ({}) => {
             title="Required Skills"
             subtitle="Add required skills for the job"
           >
-            <InputSkills form={form} />
+            <InputSkills form={form} name="requiredSkills" label="Add Skills" />
           </FieldInput>
 
           <FieldInput

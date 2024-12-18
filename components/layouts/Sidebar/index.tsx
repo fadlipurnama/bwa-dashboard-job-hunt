@@ -22,7 +22,7 @@ const SidebarComponent: FC<SidebarComponentProps> = ({}) => {
     <div className="pb-12 min-h-screen">
       <div className="space-y-4 py-4">
         <div className="px-3 py-2">
-          <h2 className="mb-2 px-4 text-lg font-semibold">Dashboard</h2>
+          <div className="mb-2 px-4 text-lg font-semibold">Dashboard</div>
           <div className="space-y-3">
             <Button
               variant={"ghost"}
@@ -74,10 +74,11 @@ const SidebarComponent: FC<SidebarComponentProps> = ({}) => {
           </div>
           <div className="space-y-4 py-4">
             <div className="px-3 py-2">
-              <h2 className="mb-2 px-4 text-lg font-semibold">Settings</h2>
+              <div className="mb-2 px-4 text-lg font-semibold">Settings</div>
               <Button
                 variant={"ghost"}
                 className="w-full justify-start rounded-none hover:text-primary"
+              onClick={()=> router.push('/settings')}
               >
                 <BsGear className="mr-2 text-lg" />
                 Settings

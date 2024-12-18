@@ -121,7 +121,7 @@ const JobDetail: FC<JobDetailProps> = ({}) => {
             <div key={item}>
               <PartyPopperIcon className="w-10 h-10 text-primary mb-6" />
 
-              <div className="text-base font-semibold mb-3">Full Healthcare</div>
+              <h3 className="text-lg font-semibold mb-3">Full Healthcare</h3>
               <p className="text-gray-500">
                 We believe in thriving communities and that starts with our team being happy and healthy
               </p>

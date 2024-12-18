@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useRef } from "react";
-import { FormField, FormItem, FormMessage } from "../ui/form";
+import { FormField, FormItem, FormMessage } from "../../ui/form";
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 import { jobFormSchema } from "@/lib/form-schema"; // Sesuaikan skema Anda
